@@ -18,10 +18,12 @@ from django.urls import path, include
 from rest_framework import routers
 from pessoas.api.viewsets import PessoasViewset
 from empresas.api.viewsets import EmpresasViewSet
+from dono.api.viewsets import DonosViewSet
 
 router = routers.DefaultRouter()
 router.register(r'pessoas', PessoasViewset)
 router.register(r'empresas', EmpresasViewSet)
+router.register(r'dono', DonosViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
